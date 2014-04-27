@@ -1,0 +1,55 @@
+
+Use AVR gcc (a package in Fedora YUM is available) to compile via Makefile,
+use uisp to download hex file into AVR CPU via ISP cable.
+
+--------------------
+
+uisp -dprog=stk200 --erase --upload if=dcfnix.hex --verify
+
+uisp -dprog=stk200 --rd_fuses
+
+picocom /dev/ttyS0 -b38400 -c
+
+
+External XTAL 8MHz
+    CKSEL3:1 = 111
+    CKSEL0 = 1
+=>
+    Fuse low byte = 0xEF
+uisp -dprog=stk200 --wr_fuse_l=0xef
+
+
+External XTAL 16MHz
+    CKSEL3:1 = 111
+    CKSEL0 = 1
+    CKOPT = 0
+=>
+    Fuse low byte = 0xEF
+    Fuse high byte = 0x89
+uisp -dprog=stk200 --wr_fuse_l=0xef --wr_fuse_h=0x89
+
+
+
+Calibrated internal 8MHz RC:
+    CKSEL = 0100
+=>
+    Fuse low byte = 0xE4
+uisp -dprog=stk200 --wr_fuse_l=0xe4
+
+
+Calibrated internal 1MHz RC:
+    CKSEL = 0001
+=>
+    Fuse low byte = 0xE1
+uisp -dprog=stk200 --wr_fuse_l=0xe1
+
+
+mpg321 "Lordi - Dynamite Toonite.mp3" -w ~/zvuk/dynamite.wav
+
+#sox dynamite.wav -b 8 -c 1 -r 22000 -e signed-integer dynamite.raw
+sox dynamite.wav -b 8 -c 1 -r 22000 -e unsigned-integer dynamite.raw
+
+
+
+play -r 8000 -c 1 -b 16 -L -e unsigned  dyna-u16.raw
+play -r 22000 -c 1 -b 8 -L -e unsigned  dynamite.raw
