@@ -1,0 +1,405 @@
+EESchema Schematic File Version 2  date So 19. září 2009, 17:07:53 CEST
+LIBS:power,triple_led,z573m,cpol,sn75468,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,ei30-12-5-2,nixieboard-cache
+EELAYER 23  0
+EELAYER END
+$Descr A4 11700 8267
+Sheet 2 4
+Title "NukaClock Nixieboard / High voltage anode power supply"
+Date "17 aug 2009"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	9500 3900 8200 3900
+Wire Wire Line
+	10300 4300 10300 3300
+Wire Wire Line
+	10300 3300 9900 3300
+Wire Wire Line
+	10750 3700 10750 3900
+Wire Wire Line
+	10750 3900 10100 3900
+Connection ~ 8550 5200
+Wire Wire Line
+	9300 5200 9300 4700
+Connection ~ 9300 3900
+Connection ~ 7550 5200
+Wire Wire Line
+	8550 5200 8550 5050
+Wire Wire Line
+	8000 4300 8000 4200
+Connection ~ 7550 4450
+Wire Wire Line
+	7550 4600 7550 4450
+Wire Wire Line
+	7100 4650 7100 4400
+Connection ~ 6550 3900
+Wire Wire Line
+	1900 3700 1600 3700
+Wire Wire Line
+	2750 3250 2900 3250
+Wire Wire Line
+	2900 3250 2900 3000
+Wire Wire Line
+	2900 3000 3550 3000
+Wire Wire Line
+	6300 3000 6550 3000
+Wire Wire Line
+	3450 3900 3450 3450
+Wire Wire Line
+	3450 3450 3550 3450
+Connection ~ 4600 3900
+Wire Wire Line
+	4600 3900 4600 3450
+Wire Wire Line
+	4600 3450 4700 3450
+Connection ~ 5250 3000
+Wire Wire Line
+	5250 3000 5250 3450
+Wire Wire Line
+	5250 3450 5100 3450
+Wire Wire Line
+	6550 3000 6550 3250
+Wire Wire Line
+	6250 3000 6350 3000
+Connection ~ 5450 3000
+Wire Wire Line
+	5450 3000 5450 3250
+Connection ~ 4350 3000
+Wire Wire Line
+	4350 3000 4350 3250
+Wire Wire Line
+	4700 3900 4000 3900
+Wire Wire Line
+	5150 3000 5800 3000
+Wire Wire Line
+	2750 3550 2900 3550
+Wire Wire Line
+	2900 3550 2900 3450
+Wire Wire Line
+	2900 3450 2750 3450
+Wire Wire Line
+	4000 3000 4700 3000
+Wire Wire Line
+	5800 3900 5150 3900
+Wire Wire Line
+	3950 3450 4100 3450
+Wire Wire Line
+	4100 3450 4100 3000
+Connection ~ 4100 3000
+Wire Wire Line
+	4350 3650 4350 3900
+Connection ~ 4350 3900
+Wire Wire Line
+	5450 3650 5450 3900
+Connection ~ 5450 3900
+Wire Wire Line
+	6550 3650 6550 3900
+Wire Wire Line
+	6200 3450 6350 3450
+Wire Wire Line
+	6350 3450 6350 3000
+Connection ~ 6350 3000
+Wire Wire Line
+	5800 3450 5700 3450
+Wire Wire Line
+	5700 3450 5700 3900
+Connection ~ 5700 3900
+Wire Wire Line
+	2750 3750 2900 3750
+Wire Wire Line
+	3550 3900 2900 3900
+Connection ~ 3450 3900
+Wire Wire Line
+	1600 3300 1900 3300
+Connection ~ 2900 3900
+Wire Wire Line
+	6250 3900 7800 3900
+Connection ~ 7100 3900
+Wire Wire Line
+	7100 4450 7750 4450
+Connection ~ 7100 4450
+Wire Wire Line
+	8250 4450 8550 4450
+Wire Wire Line
+	8550 4450 8550 4550
+Wire Wire Line
+	7550 5200 7550 5050
+Wire Wire Line
+	7100 5050 7100 5450
+Connection ~ 7100 5200
+Wire Wire Line
+	2900 3750 2900 5200
+Connection ~ 9300 5200
+Wire Wire Line
+	10300 4700 10300 5200
+Wire Wire Line
+	10300 5200 2900 5200
+Connection ~ 10300 3900
+Wire Wire Line
+	9700 3300 9300 3300
+Wire Wire Line
+	9300 3300 9300 4300
+Wire Wire Line
+	9800 3300 9800 3450
+$Comp
+L GND #PWR01
+U 1 1 4A7591F2
+P 9800 3450
+F 0 "#PWR01" H 9800 3450 30  0001 C CNN
+F 1 "GND" H 9800 3380 30  0001 C CNN
+	1    9800 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 P4
+U 1 1 4A7591E2
+P 9800 2950
+F 0 "P4" V 9750 2950 50  0000 C CNN
+F 1 "CONN_3" V 9850 2950 40  0000 C CNN
+	1    9800 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L JUMPER JP1
+U 1 1 4A759149
+P 9800 3900
+F 0 "JP1" H 9800 4050 60  0000 C CNN
+F 1 "JUMPER" H 9800 3820 40  0000 C CNN
+	1    9800 3900
+	1    0    0    -1  
+$EndComp
+Text Notes 850  3500 0    60   ~ 0
+Mains: 230V-AC
+$Comp
+L C C28
+U 1 1 4A758D2D
+P 10300 4500
+F 0 "C28" H 10350 4600 50  0000 L CNN
+F 1 "10n/250V" V 10350 4200 50  0000 L CNN
+	1    10300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C27
+U 1 1 4A758D2A
+P 9300 4500
+F 0 "C27" H 9350 4600 50  0000 L CNN
+F 1 "10n/250V" V 9350 4200 50  0000 L CNN
+	1    9300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L VAA #PWR3
+U 1 1 4A758CE8
+P 10750 3700
+F 0 "#PWR3" H 10750 3900 40  0001 C CNN
+F 1 "VAA" H 10750 3850 40  0000 C CNN
+	1    10750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 4A758CDA
+P 7100 5450
+F 0 "#PWR02" H 7100 5450 30  0001 C CNN
+F 1 "GND" H 7100 5380 30  0001 C CNN
+	1    7100 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R52
+U 1 1 4A758CB6
+P 8550 4800
+F 0 "R52" V 8630 4800 50  0000 C CNN
+F 1 "M22" V 8550 4800 50  0000 C CNN
+	1    8550 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV1
+U 1 1 4A758CA6
+P 8000 4450
+F 0 "RV1" H 8000 4350 50  0000 C CNN
+F 1 "100k" H 8000 4450 50  0000 C CNN
+	1    8000 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CPOL C26
+U 1 1 4A758C7B
+P 7550 4850
+F 0 "C26" H 7500 5000 60  0000 C CNN
+F 1 "10M/250V" H 7550 4700 60  0000 C CNN
+	1    7550 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L ZENER D16
+U 1 1 4A758C71
+P 7100 4850
+F 0 "D16" H 7100 4950 50  0000 C CNN
+F 1 "BZX85V200" H 7100 4750 40  0000 C CNN
+	1    7100 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R51
+U 1 1 4A758C68
+P 7100 4150
+F 0 "R51" V 7180 4150 50  0000 C CNN
+F 1 "100k" V 7100 4150 50  0000 C CNN
+	1    7100 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L NPN Q20
+U 1 1 4A758C54
+P 8000 4000
+F 0 "Q20" H 8150 4000 50  0000 C CNN
+F 1 "MPSA42" V 7900 4250 50  0000 C CNN
+	1    8000 4000
+	0    -1   -1   0   
+$EndComp
+Text Notes 1900 2850 0    60   ~ 0
+Sec: 2x18V / 1,5VA
+$Comp
+L DIODE D15
+U 1 1 4A758AE7
+P 6550 3450
+F 0 "D15" H 6550 3550 40  0000 C CNN
+F 1 "1N4004" H 6550 3350 40  0000 C CNN
+	1    6550 3450
+	0    -1   1    0   
+$EndComp
+$Comp
+L DIODE D13
+U 1 1 4A758AE4
+P 5450 3450
+F 0 "D13" H 5450 3550 40  0000 C CNN
+F 1 "1N4004" H 5450 3350 40  0000 C CNN
+	1    5450 3450
+	0    -1   1    0   
+$EndComp
+$Comp
+L DIODE D11
+U 1 1 4A758ADC
+P 4350 3450
+F 0 "D11" H 4350 3550 40  0000 C CNN
+F 1 "1N4004" H 4350 3350 40  0000 C CNN
+	1    4350 3450
+	0    -1   1    0   
+$EndComp
+$Comp
+L DIODE D14
+U 1 1 4A758AD4
+P 6000 3450
+F 0 "D14" H 6000 3550 40  0000 C CNN
+F 1 "1N4004" H 6000 3350 40  0000 C CNN
+	1    6000 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D12
+U 1 1 4A758AD2
+P 4900 3450
+F 0 "D12" H 4900 3550 40  0000 C CNN
+F 1 "1N4004" H 4900 3350 40  0000 C CNN
+	1    4900 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D10
+U 1 1 4A758AC8
+P 3750 3450
+F 0 "D10" H 3750 3550 40  0000 C CNN
+F 1 "1N4004" H 3750 3350 40  0000 C CNN
+	1    3750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CPOL C25
+U 1 1 4A758ABF
+P 6000 3900
+F 0 "C25" H 5950 4050 60  0000 C CNN
+F 1 "100M/160V" H 6000 3750 60  0000 C CNN
+	1    6000 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CPOL C24
+U 1 1 4A758ABD
+P 4900 3900
+F 0 "C24" H 4850 4050 60  0000 C CNN
+F 1 "100M/160V" H 4900 3750 60  0000 C CNN
+	1    4900 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CPOL C23
+U 1 1 4A758AB8
+P 3750 3900
+F 0 "C23" H 3700 4050 60  0000 C CNN
+F 1 "100M/160V" H 3750 3750 60  0000 C CNN
+	1    3750 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CPOL C22
+U 1 1 4A758AB5
+P 6000 3000
+F 0 "C22" H 5950 3150 60  0000 C CNN
+F 1 "100M/160V" H 6000 2850 60  0000 C CNN
+	1    6000 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CPOL C21
+U 1 1 4A758AB3
+P 4900 3000
+F 0 "C21" H 4850 3150 60  0000 C CNN
+F 1 "100M/160V" H 4900 2850 60  0000 C CNN
+	1    4900 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CPOL C20
+U 1 1 4A758AA1
+P 3750 3000
+F 0 "C20" H 3700 3150 60  0000 C CNN
+F 1 "100M/160V" H 3750 2850 60  0000 C CNN
+	1    3750 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P3
+U 1 1 4A758A87
+P 1450 3700
+F 0 "P3" H 1530 3700 40  0000 L CNN
+F 1 "CONN_1" H 1450 3755 30  0001 C CNN
+	1    1450 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P2
+U 1 1 4A758A81
+P 1450 3300
+F 0 "P2" H 1530 3300 40  0000 L CNN
+F 1 "CONN_1" H 1450 3355 30  0001 C CNN
+	1    1450 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L EI30/12.5-2 TR1
+U 1 1 4A758A6F
+P 2300 3500
+F 0 "TR1" H 2350 3850 60  0000 C CNN
+F 1 "EI30/12.5-2" H 2350 3150 60  0000 C CNN
+	1    2300 3500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

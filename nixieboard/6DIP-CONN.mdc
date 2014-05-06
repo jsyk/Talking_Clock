@@ -1,0 +1,15 @@
+PCBNEW-LibDoc----V1  12/8/2009-18:53:16
+#
+$MODULE U***
+Li U***
+Cd Module Dil 6 pins, pads elliptiques
+Kw DIL
+$EndMODULE
+#
+$MODULE 6DIP-CONN
+Li 6DIP-CONN
+Cd Module Dil 6 pins, pads elliptiques
+Kw DIL
+$EndMODULE
+#
+$EndLIBDOC
